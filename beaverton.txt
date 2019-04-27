@@ -1,0 +1,31 @@
+6
+Barbara
+Kingsolver
+The Poisonwood Bible
+11
+1999
+Kate
+DiCamilo
+Tales of Desperaux
+8
+1993
+Paulo
+Coelho
+The Alchemist
+13
+1988
+Nicholas
+Sparks
+The Notebook
+8
+1996
+George
+Orwell
+Nineteen Eighty-Four
+14
+1949
+Grace
+Linn
+Where the Mountain Meets the Moon
+9
+2009

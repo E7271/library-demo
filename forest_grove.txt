@@ -1,0 +1,21 @@
+4
+Arthur
+Miller
+Death of a Salesman
+4
+1949
+Nicholas
+Sparks
+The Notebook
+2
+1996
+Barbara
+Kingsolver
+The Poisonwood Bible
+2
+1999
+Greg
+Mortenson
+Three Cups of Tea
+3
+2006
