@@ -15,16 +15,25 @@ public class Library {
         catalog = new ArrayList<Book>();
     }
 
+    /**
+     * Adds a given book to the Library
+     * Increments copies of existing books instead if duplicate found
+     * @param b the book to add
+     */
     public void add(Book b) {
+
         for (int x = 0; x < catalog.size(); x++) {
-            if (b.getTitle().equals(catalog.get(x).getTitle())) {
-                catalog.add(b);
+            if (b.equals(catalog.get(x))) {
+
+                //
+
+                catalog.get(x).setCopies(catalog.get(x).getCopies() + b.getCopies());
+
+
             } else {
-                int temp_int = catalog.get(x).getCopies();
-                catalog.get(x).setCopies(temp_int++);
+                catalog.add(b);
             }
         }
-        catalog.add(b);
     }
 
 
@@ -37,6 +46,17 @@ public class Library {
     }
 
     public static Library merge(Library lib1, Library lib2) {
+
+        //Library output_library = new Library("TempName");
+
+
+
+
+
+        //return output_library;
+
+
+
         ArrayList<Book> temp_array = new ArrayList<Book>();
 
         Library output_library = new Library("TempName");
@@ -52,12 +72,14 @@ public class Library {
             for (int y = 0; y < temp_array.size(); y++) {
                 if (temp_array.get(x).getTitle().equals(temp_array.get(y).getTitle())) {
                     temp_array.get(x).setCopies(temp_array.get(y).getCopies() + temp_array.get(x).getCopies());
+
                 }
             }
         }
 
         output_library.catalog = temp_array;
         return output_library;
+
     }
 
     public int get_catalog_size() {

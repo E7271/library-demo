@@ -1,4 +1,4 @@
-public class Book {
+public class Book extends Object {
 
     private String author_first;
     private String author_last;
@@ -12,6 +12,24 @@ public class Book {
         this.title = title;
         this.copies = copies;
         this.publication_date = publication_date;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        /*
+            Checks if the given book (if it's even a book) has the same title
+         */
+
+        if (! (o instanceof Book)) return false; // Reject all non-books
+
+        Book b = (Book) o; // Cast to book to access methods
+
+        // Checks if the titles of the books are the same
+        if (this.title.equals(b.getTitle())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public String getAuthor_first() {
