@@ -22,18 +22,30 @@ public class Library {
      */
     public void add(Book b) {
 
+        /*
+            add: Get book b, need to add to array if not duplicate
+
+            Scan catalog to make sure no books are duplicate
+                If title is the same:
+                    Increments copies of book already in the array
+                    return
+
+            Add to library
+         */
+
+        // Scan catalog to make sure no books are duplicate
         for (int x = 0; x < catalog.size(); x++) {
             if (b.equals(catalog.get(x))) {
 
-                //
+                // Increments copies of book already in the array
 
                 catalog.get(x).setCopies(catalog.get(x).getCopies() + b.getCopies());
+                return;
 
-
-            } else {
-                catalog.add(b);
             }
         }
+
+        catalog.add(b);
     }
 
 
@@ -45,41 +57,33 @@ public class Library {
         this.library_name = library_name;
     }
 
+    /**
+     * Combines the catalogs of two given libraries without duplicating media
+     *
+     * @param lib1 first library
+     * @param lib2 second library
+     * @return new library created from merging the two libs
+     */
     public static Library merge(Library lib1, Library lib2) {
 
-        //Library output_library = new Library("TempName");
+        /*
+            Create new library
+            Iterate through lib1
+                use add method
+            Iterate through lib2
+                use add method
+            return new library
+         */
 
+        Library new_library = new Library("New Library");
 
+        for (Book b : lib1.catalog) new_library.add(b); // For each
 
-
-
-        //return output_library;
-
-
-
-        ArrayList<Book> temp_array = new ArrayList<Book>();
-
-        Library output_library = new Library("TempName");
-
-        for (int x = 0; x < lib1.catalog.size(); x++) {
-            temp_array.add(lib1.catalog.get(x));
-        }
-        for (int x = 0; x < lib2.catalog.size(); x++) {
-            temp_array.add(lib2.catalog.get(x));
+        for(int x =0 ; x < lib2.get_catalog_size(); x++){ // Traditional for loop
+            new_library.add(lib2.catalog.get(x));
         }
 
-        for (int x = 0; x < temp_array.size(); x++) {
-            for (int y = 0; y < temp_array.size(); y++) {
-                if (temp_array.get(x).getTitle().equals(temp_array.get(y).getTitle())) {
-                    temp_array.get(x).setCopies(temp_array.get(y).getCopies() + temp_array.get(x).getCopies());
-
-                }
-            }
-        }
-
-        output_library.catalog = temp_array;
-        return output_library;
-
+        return new_library;
     }
 
     public int get_catalog_size() {

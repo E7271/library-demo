@@ -2,14 +2,9 @@ public class TestDriver {
 
     public static void main(String args[]) {
 
-        Library demo = new Library("Demo");
-        demo.add(new Book("Barbara", "Kingsolver", "The Poisonwood Bible", 2, "1999"));
-        demo.add(new Book("Kate", "DiCamilo", "Tales of Desperaux", 2, "1993"));
-        demo.add(new Book("Paulo", "Coelho", "The Alchemist", 2, "1988"));
-        Library.print(demo);
-        System.out.println();
-        demo.add(new Book("Barbara", "Kingsolver", "The Poisonwood Bible", 3, "1999"));
-        Library.print(demo);
+        Library library = new Library("WCCLS");
+        library.load_library("wccls.txt");
+        Library.print(library);
 
         /*
         Library forest_grove = new Library("Forest Grove City Library");
@@ -31,6 +26,8 @@ public class TestDriver {
         Library wccls = Library.merge(tempLib,beaverton);
         wccls.setLibrary_name("WCCLS");
         Library.print(wccls);
+
+        wccls.save_library("wccls.txt");
         */
     }
 

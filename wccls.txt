@@ -1,0 +1,51 @@
+10
+Harper
+Lee
+To Kill a Mockingbird
+5
+1960
+George
+Orwell
+Nineteen Eighty-Four
+22
+1949
+Brian
+Jacques
+Mossflower
+4
+1988
+Barbara
+Kingsolver
+The Poisonwood Bible
+20
+1999
+Paulo
+Coelho
+The Alchemist
+18
+1988
+Arthur
+Miller
+Death of a Salesman
+4
+1949
+Nicholas
+Sparks
+The Notebook
+10
+1996
+Greg
+Mortenson
+Three Cups of Tea
+3
+2006
+Kate
+DiCamilo
+Tales of Desperaux
+8
+1993
+Grace
+Linn
+Where the Mountain Meets the Moon
+9
+2009
