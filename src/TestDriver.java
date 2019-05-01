@@ -1,10 +1,15 @@
 public class TestDriver {
 
     public static void main(String args[]) {
-
+/*
         Library library = new Library("WCCLS");
         library.load_library("wccls.txt");
         Library.print(library);
+  */
+        Movie mononoke = new Movie("Mononoke-hime", 150, "Hayao Miyazakai", "1997");
+        Library nono = new Library("nono");
+        nono.add(mononoke);
+
 
         /*
         Library forest_grove = new Library("Forest Grove City Library");
